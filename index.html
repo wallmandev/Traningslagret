@@ -4,11 +4,328 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSS - BASE</title>
+    <title>Träningslagret</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://use.typekit.net/lkv1iwj.css">
     <link rel="stylesheet" href="style.css">
+    <script src="/src/JS/script.js" defer></script>
 </head>
 <body>
+<div class="container">
 
+    <!-- Header -->
+    <div class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img class="header__logo-image" src="/src/Images/Traningslagret-logo.svg" alt="">
+            </div>
+
+            <div class="header__menu">
+                <ul class="header__menu-item">
+                    <a href="" class="header__menu-link"><li class="header__menu-list">HEM</li></a>
+                    <a href="" class="header__menu-link"><li class="header__menu-list">TRÄNING</li></a>
+                    <a href="" class="header__menu-link"><li class="header__menu-list">OM OSS</li></a>
+                    <a href="" class="header__menu-link"><li class="header__menu-list">KONTAKT</li></a>
+                    <a href="" class="header__menu-link"><li class="header__menu-list">ÖPPETTIDER</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
     
+    <section class="hero">
+        
+        <div class="hero__inner">
+
+            <div class="hero__content">
+                <h2 class="hero__content-header">DIN HÄLSA ÄR VÅRT MÅL KOM IGÅNG REDAN IDAG!</h2>
+                <div class="hero__content-buttons">
+
+                    <button class="hero__content-button hero__content-button--red">
+                        BOKA / SCHEMA
+                    </button>
+                    
+                    <button class="hero__content-button">
+                        BLI MEDLEM
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class="hero__footer">
+                <button class="hero__footer-button"><span class="material-symbols-outlined">
+                    south
+                </span></button>
+                <p class="hero__footer-readmore">LÄS MER</p>
+                <div class="hero__footer-social">
+                    <a href="" class="hero__footer-facebook">
+                        <img src="src/Images/Facebook_details.svg" alt="">
+                    </a>
+                    <a href="" class="hero__footer-instagram">
+                        <img src="src/Images/Instagram_details.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERS -->
+
+    <section class="offers">
+        <div class="offers__inner">
+            <button class="offers__price">
+                <h3>TRÄNA FRÅN</h3>
+                <h1>479kr/MÅN*</h1>
+                <p>*Gäller ungdom / Pensionär autogiro</p>
+                <span class="material-symbols-outlined">
+                    east
+                </span>
+            </button>
+
+            <button class="offers__book">
+                <h3>SE VÅRT UTBUD AV</h3>
+                <h1>GRUPPTRÄNING</h1>
+                <span class="material-symbols-outlined">
+                    east
+                </span>
+            </button>
+            
+            <button class="offers__free">
+                <h3>SUGEN PÅ ATT BÖRJA TRÄNA?</h3>
+                <h1>PROVA GRATIS!</h1>
+                <span class="material-symbols-outlined">
+                    east
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+
+    <section class="news">
+        <div class="news__inner">
+
+            <div class="news__header">
+                <h2>SENASTE NYTT</h2>
+            </div>
+
+            <div class="news__grid-container">
+
+                <div class="news__big">
+                    <div class="news__big-updated">
+                        <h4>23 Mars 2023</h4>
+                    </div>
+                    <div class="news__big-header">
+                        <h1>TRÄNINGSLARGRET KARLSKOGA</h1>
+                    </div>
+                    <figure class="news__big-figure">
+                        <img src="src/Images/Training-left.svg" alt="" class="news__big-image">
+                    </figure>
+                    <div class="news__big-paragraph">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex incidunt vero sequi ratione? Consequatur, consequuntur at. 
+                            Omnis ipsam ex quaerat sunt, soluta similique quod delectus, earum a iure hic! Incidunt est voluptatem harum. 
+                            Provident, ab consectetur nihil voluptatibus reprehenderit, eius, amet illum distinctio reiciendis consequatur consequuntur hic. 
+                            Ducimus iure eos in optio labore possimus vitae nihil sapiente neque aperiam.
+                        </p>
+                    </div>
+                    <div class="news__big-buttons">
+                        <button class="news__big-readmore">LÄS MER</button>
+                        <button class="news__big-share">DELA +</button>
+                    </div>
+                </div>
+
+                <div class="news__small">
+                    <div class="news__small-updated">
+                        <h4>23 Mars 2023</h4>
+                    </div>
+                    <div class="news__small-header">
+                        <h3>VI SPRINGER IN PENGAR TILL BARNCANCERFONDEN</h3>
+                    </div>
+                    <figure class="news__small-figure">
+                        <img src="src/Images/Small-training.svg" alt="" class="news__small-image">
+                    </figure>
+                    <div class="news__small-paragraph">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex incidunt vero sequi.
+                        </p>
+                    </div>
+                    <div class="news__small-buttons">
+                        <button class="news__small-readmore">LÄS MER</button>
+                        <button class="news__small-share">DELA +</button>
+                    </div>
+
+                </div>
+
+                <div class="news__small-under">
+                    <div class="news__small-updated">
+                        <h4>23 Mars 2023</h4>
+                    </div>
+                    <div class="news__small-header">
+                        <h3>VÅRENS NYHETER!</h3>
+                    </div>
+                    <figure class="news__small-figure">
+                        <img src="src/Images/Training-small-lower.svg" alt="" class="news__small-image">
+                    </figure>
+                    <div class="news__small-paragraph">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex incidunt vero sequi.
+                        </p>
+                    </div>
+                    <div class="news__small-buttons">
+                        <button class="news__small-readmore">LÄS MER</button>
+                        <button class="news__small-share">DELA +</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+
+    <section class="banner">
+        <div class="banner__inner">
+            <img src="src/Images/second-hero.svg" alt="" class="banner__image">
+            <div class="banner__overlay">
+                <h2 class="banner__overlay-content">BEHÖVER DU HJÄLP ATT KOMMA IGÅNG?</h2>
+                <h3 class="banner__overlay-breadcrumb">VI ERBJUDER BÅDE PERSONLIG TRÄNARE OCH KOSTRÅDGIVNING</h3>
+            </div>  
+        </div>
+    </section>
+
+    <!-- OPEN DAYS/TIMES -->
+
+    <section class="open">
+        <div class="open__inner">
+
+            <div class="open__header">
+                <h2>ÖPPETTIDER</h2>
+                <h5>VECKA 13</h5>
+                <div class="open__header-calendar">
+                    <button>
+                        SE KALENDER
+                    </button>
+                </div>
+            </div>
+
+            <div class="open__time">
+
+                <div class="open__time-reception">
+                    <h1>RECEPTION</h1>
+                    <div class="open__time-reception-wrapper">
+                        <ul class="open__time-reception-days">
+                            <li class="open__time-reception-days">Måndag</li>
+                            <li class="open__time-reception-days">Tisdag</li>
+                            <li class="open__time-reception-days">Onsdag</li>
+                            <li class="open__time-reception-days">Torsdag</li>
+                            <li class="open__time-reception-days">Fredag</li>
+                            <li class="open__time-reception-days">Lördag</li>
+                            <li class="open__time-reception-days">Söndag</li>
+                        </ul>
+                        <ul class="open__time-reception-time">
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="open__time-sauna">
+                    <h1>BASTU</h1>
+                    <div class="open__time-sauna-wrapper">
+                        <ul class="open__time-sauna-list">
+                            <li class="open__time-sauna-days">Måndag</li>
+                            <li class="open__time-sauna-days">Tisdag</li>
+                            <li class="open__time-sauna-days">Onsdag</li>
+                            <li class="open__time-sauna-days">Torsdag</li>
+                            <li class="open__time-sauna-days">Fredag</li>
+                            <li class="open__time-sauna-days">Lördag</li>
+                            <li class="open__time-sauna-days">Söndag</li>    
+                        </ul>
+                        <ul>
+                            <li class="open__time-sauna-time">09:30 - 20:00</li>
+                            <li class="open__time-sauna-time">09:30 - 20:00</li>
+                            <li class="open__time-sauna-time">09:30 - 20:00</li>
+                            <li class="open__time-sauna-time"> 09:30 - 19:00</li>
+                            <li class="open__time-sauna-time"> 09:30 - 19:00</li>
+                            <li class="open__time-sauna-time"> 09:00 - 13:00</li>
+                            <li class="open__time-sauna-time">16:00 - 20:00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="open__time-keycard">
+                    <h1>KEYCARD</h1>
+                    <div class="open__time-keycard-wrapper">
+                        <ul class="open__time-keycard-list">
+                            <li class="open__time-keycard-days">Måndag</li>
+                            <li class="open__time-keycard-days">Tisdag</li>
+                            <li class="open__time-keycard-days">Onsdag</li>
+                            <li class="open__time-keycard-days">Torsdag</li>
+                            <li class="open__time-keycard-days">Fredag</li>
+                            <li class="open__time-keycard-days">Lördag</li>
+                            <li class="open__time-keycard-days">Söndag</li>
+                        </ul>
+                        <ul>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+
+    <section class="map">
+        <div class="map__inner">
+            <img src="/src/Images/MAP.svg" alt="" class="map__image">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <section class="footer">
+        <div class="footer__inner">
+            <div class="foote__info">
+                <img src="src/Images/Traningslagret-logo.svg" alt="">
+                <h6>Träningslagret Fitness Center</h6>
+                <p>Centrumleden 21A</p>
+                <p>69140 Karlskoga</p>
+                <p><span>Telefon</span>0586 - 339 00</p>
+
+            </div>
+
+            <div class="footer__buttons">
+                <button>Bli medlem</button>
+                <button>Personlig Träning</button>
+                <button>Företag</button>
+                <button>Om Oss</button>
+                <button>Kontakt</button>
+            </div>
+
+            <div class="footer__logo">
+                <img src="src/Images/LOGO-FRISKVARD.svg" alt="">
+
+                <div class="footer__social">
+                    <img src="src/Images/Facebook_details.svg" alt="">
+                    <img src="src/Images/Instagram_details.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>   
 </body>
 </html>

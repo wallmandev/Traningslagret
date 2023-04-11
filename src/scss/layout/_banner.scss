@@ -1,0 +1,34 @@
+.banner{
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    height: 380px;
+
+
+    &__inner{
+        grid-column: inner;
+
+    }
+    
+    &__image{
+        position: absolute;
+        opacity: 0.63;
+        background-color: black;
+    }
+
+    &__overlay{
+        position: relative;
+        padding: 1rem 3rem;
+        top: 20%;
+    }
+
+    &__overlay-content{
+        color: #fff;
+        font-size: 88px;
+        margin: 0;
+    }
+
+    &__overlay-breadcrumb{
+        color: #fff;
+        font-size: 39px;
+    }
+}

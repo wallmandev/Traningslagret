@@ -1,0 +1,36 @@
+.footer{
+    height: 450px;
+    background-color: #2B3135;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner{
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__info{
+
+
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo{
+        display: flex;
+        flex-direction: column;
+        gap: 5.6rem;
+
+    }
+    &__social{
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}

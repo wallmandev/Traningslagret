@@ -1,0 +1,48 @@
+@use '../../scss/components/details';
+
+.offers{
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner{
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 0;
+        background: none;
+        background-color: #3f4a53d6;
+
+        @include details.arrow;
+    }
+
+    &__book{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 0;
+        background: none;
+        background-color: rgba($color: #3F4A53, $alpha: 0.3);
+
+        @include details.arrow;
+    }
+
+    &__free{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 0;
+        background: none;
+        background-color: rgba($color: #3F4A53, $alpha: 0.3);
+
+        @include details.arrow;
+    }
+
+
+}

@@ -38,8 +38,8 @@
     --color-light-800: #efead8;
     --color-light-900: #efead8;
 
-    --font-sans: 'Arial', sans-serif;
-    --font-serif: 'Georgia', serif;
+    --font-sans: 'Industry', sans-serif;
+    --font-serif: 'Abolition', serif;
 
     --line-height: 1.5;
 
@@ -52,5 +52,9 @@
     --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
     --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+
+    --page-width: 80rem;
+
+    --grid-container: [full-start] minmax(80px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(80px, 1fr) [full-end];
 
 }
