@@ -9,28 +9,62 @@
     <link rel="stylesheet" href="https://use.typekit.net/lkv1iwj.css">
     <link rel="stylesheet" href="style.css">
     <script src="/src/JS/script.js" defer></script>
+    <script src="/src/JS/hamburger.js" defer></script>
+    <script src="/src/JS/scroll.js" defer></script>
 </head>
 <body>
-<div class="container">
+<div id="Home" class="container">
 
+    
     <!-- Header -->
     <div class="header">
         <div class="header__inner">
             <div class="header__logo">
                 <img class="header__logo-image" src="/src/Images/Traningslagret-logo.svg" alt="">
             </div>
-
-            <div class="header__menu">
+            
+            
+            <nav class="header__menu">
                 <ul class="header__menu-item">
-                    <a href="" class="header__menu-link"><li class="header__menu-list">HEM</li></a>
-                    <a href="" class="header__menu-link"><li class="header__menu-list">TRÄNING</li></a>
-                    <a href="" class="header__menu-link"><li class="header__menu-list">OM OSS</li></a>
-                    <a href="" class="header__menu-link"><li class="header__menu-list">KONTAKT</li></a>
-                    <a href="" class="header__menu-link"><li class="header__menu-list">ÖPPETTIDER</li></a>
+                    <button class="header__menu-button"><li class="header__menu-list header__menu-list-home">HEM</li></button>
+                    <button class="header__menu-button"><li class="header__menu-list offers-button">TRÄNING</li></button>
+                    <button class="header__menu-button"><li class="header__menu-list about-button">OM OSS</li></button>
+                    <button class="header__menu-button"><li class="header__menu-list contact-button">KONTAKT</li></button>
+                    <button class="header__menu-button"><li class="header__menu-list open-button">ÖPPETTIDER</li></button>
                 </ul>
+            </nav>
+
+            <!-- Mobile/Tablet Menu -->
+            <div class="hamburger">
+                <button id="burger" class="hamburger__open-main-nav">
+                    <span class="hamburger__burger"></span>
+                </button>
+                <nav class="hamburger__main-nav" id="main-nav">
+                    <ul>
+                        <li>
+                            <button id="Home">HEM</button>
+                        </li>
+                        <li>
+                            <button id="TrainingMobile">TRÄNING</button>
+                        </li>
+                        <li>
+                            <button id="AboutMobile">OM OSS</button>
+                        </li>
+                        <li>
+                            <button id="ContactMobile">KONTAKT</button>
+                        </li>
+                        <li>
+                            <button id="OpenTimesMobile">ÖPPETTIDER</button>
+                        </li>
+                        <li class="hamburger__main-nav-epost">
+                            <a href="">E-post: Kontakt@Traningslagret.se</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
+                
 
     <!-- Hero -->
     
@@ -39,7 +73,7 @@
         <div class="hero__inner">
 
             <div class="hero__content">
-                <h2 class="hero__content-header">DIN HÄLSA ÄR VÅRT MÅL KOM IGÅNG REDAN IDAG!</h2>
+                <h1 class="hero__content-header">DIN HÄLSA ÄR VÅRT MÅL KOM IGÅNG REDAN IDAG!</h1>
                 <div class="hero__content-buttons">
 
                     <button class="hero__content-button hero__content-button--red">
@@ -54,10 +88,10 @@
             </div>
 
             <div class="hero__footer">
-                <button class="hero__footer-button"><span class="material-symbols-outlined">
-                    south
-                </span></button>
-                <p class="hero__footer-readmore">LÄS MER</p>
+                <button class="hero__footer-button">
+                    <span class="material-symbols-outlined">south</span>
+                    <p class="hero__footer-button-readmore">LÄS MER</p>
+                </button>
                 <div class="hero__footer-social">
                     <a href="" class="hero__footer-facebook">
                         <img src="src/Images/Facebook_details.svg" alt="">
@@ -75,28 +109,34 @@
     <section class="offers">
         <div class="offers__inner">
             <button class="offers__price">
-                <h3>TRÄNA FRÅN</h3>
-                <h1>479kr/MÅN*</h1>
-                <p>*Gäller ungdom / Pensionär autogiro</p>
+                <div class="offers__wrapper">
+                    <h6>TRÄNA FRÅN</h6>
+                    <h4>479kr/MÅN*</h4>
+                    <p>*Gäller ungdom / Pensionär autogiro</p>
+                </div>
                 <span class="material-symbols-outlined">
                     east
                 </span>
             </button>
 
             <button class="offers__book">
-                <h3>SE VÅRT UTBUD AV</h3>
-                <h1>GRUPPTRÄNING</h1>
-                <span class="material-symbols-outlined">
-                    east
-                </span>
+                <div class="offers__wrapper">
+                    <h6>SE VÅRT UTBUD AV</h6>
+                    <h4>GRUPPTRÄNING</h4>
+                    <span class="offers__book-arrow material-symbols-outlined">
+                        east
+                    </span>
+                </div>
             </button>
             
             <button class="offers__free">
-                <h3>SUGEN PÅ ATT BÖRJA TRÄNA?</h3>
-                <h1>PROVA GRATIS!</h1>
-                <span class="material-symbols-outlined">
-                    east
-                </span>
+                <div class="offers__wrapper">
+                    <h6>SUGEN PÅ ATT BÖRJA TRÄNA?</h6>
+                    <h4>PROVA GRATIS!</h4>
+                    <span class="material-symbols-outlined">
+                        east
+                    </span>
+                </div>
             </button>
         </div>
     </section>
@@ -107,14 +147,14 @@
         <div class="news__inner">
 
             <div class="news__header">
-                <h2>SENASTE NYTT</h2>
+                <h5>SENASTE NYTT</h5>
             </div>
 
             <div class="news__grid-container">
 
                 <div class="news__big">
                     <div class="news__big-updated">
-                        <h4>23 Mars 2023</h4>
+                        <p>23 Mars 2023</p>
                     </div>
                     <div class="news__big-header">
                         <h1>TRÄNINGSLARGRET KARLSKOGA</h1>
@@ -137,10 +177,10 @@
 
                 <div class="news__small">
                     <div class="news__small-updated">
-                        <h4>23 Mars 2023</h4>
+                        <p>23 Mars 2023</p>
                     </div>
                     <div class="news__small-header">
-                        <h3>VI SPRINGER IN PENGAR TILL BARNCANCERFONDEN</h3>
+                        <h5>VI SPRINGER IN PENGAR TILL BARNCANCERFONDEN</h5>
                     </div>
                     <figure class="news__small-figure">
                         <img src="src/Images/Small-training.svg" alt="" class="news__small-image">
@@ -158,10 +198,10 @@
 
                 <div class="news__small-under">
                     <div class="news__small-updated">
-                        <h4>23 Mars 2023</h4>
+                        <p>23 Mars 2023</p>
                     </div>
                     <div class="news__small-header">
-                        <h3>VÅRENS NYHETER!</h3>
+                        <h5>VÅRENS NYHETER!</h5>
                     </div>
                     <figure class="news__small-figure">
                         <img src="src/Images/Training-small-lower.svg" alt="" class="news__small-image">
@@ -185,9 +225,12 @@
     <section class="banner">
         <div class="banner__inner">
             <img src="src/Images/second-hero.svg" alt="" class="banner__image">
-            <div class="banner__overlay">
-                <h2 class="banner__overlay-content">BEHÖVER DU HJÄLP ATT KOMMA IGÅNG?</h2>
-                <h3 class="banner__overlay-breadcrumb">VI ERBJUDER BÅDE PERSONLIG TRÄNARE OCH KOSTRÅDGIVNING</h3>
+            <div class="banner__content banner__content-overlay">
+                <span class="material-symbols-outlined">
+                    east
+                </span>
+                <h2>BEHÖVER DU HJÄLP ATT KOMMA IGÅNG?</h2>
+                <h3 class="banner__content-smalltext">VI ERBJUDER BÅDE PERSONLIG TRÄNARE OCH KOSTRÅDGIVNING</h3>
             </div>  
         </div>
     </section>
@@ -198,8 +241,8 @@
         <div class="open__inner">
 
             <div class="open__header">
-                <h2>ÖPPETTIDER</h2>
-                <h5>VECKA 13</h5>
+                <h4>ÖPPETTIDER</h4>
+                <h6>VECKA 13</h6>
                 <div class="open__header-calendar">
                     <button>
                         SE KALENDER
@@ -210,73 +253,47 @@
             <div class="open__time">
 
                 <div class="open__time-reception">
-                    <h1>RECEPTION</h1>
+                    <h5>RECEPTION</h5>
                     <div class="open__time-reception-wrapper">
-                        <ul class="open__time-reception-days">
-                            <li class="open__time-reception-days">Måndag</li>
-                            <li class="open__time-reception-days">Tisdag</li>
-                            <li class="open__time-reception-days">Onsdag</li>
-                            <li class="open__time-reception-days">Torsdag</li>
-                            <li class="open__time-reception-days">Fredag</li>
-                            <li class="open__time-reception-days">Lördag</li>
-                            <li class="open__time-reception-days">Söndag</li>
-                        </ul>
-                        <ul class="open__time-reception-time">
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
-                            <li class="open__time-reception-time">16:00 - 20:00</li>
+                        <ul class="open__time-reception-list">
+                            <li class="open__time-reception-days open__time-reception-days-color">Måndag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-reception-days">Tisdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-reception-days open__time-reception-days-color">Onsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-reception-days">Torsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-reception-days open__time-reception-days-red">Fredag <span>09:30 - 19:00</span></li>
+                            <li class="open__time-reception-days">Lördag <span>09:00 - 13:00</span></li>
+                            <li class="open__time-reception-days open__time-reception-days-color">Söndag <span>16:00 - 20:00</span></li>
                         </ul>
                     </div>
+                    <li class="open__time-reception-breadcrumb"><span>Tiderna kan komma att förändras iochmed högtider/röda dagar.</span></li>
                 </div>
 
                 <div class="open__time-sauna">
-                    <h1>BASTU</h1>
+                    <h5>BASTU</h5>
                     <div class="open__time-sauna-wrapper">
                         <ul class="open__time-sauna-list">
-                            <li class="open__time-sauna-days">Måndag</li>
-                            <li class="open__time-sauna-days">Tisdag</li>
-                            <li class="open__time-sauna-days">Onsdag</li>
-                            <li class="open__time-sauna-days">Torsdag</li>
-                            <li class="open__time-sauna-days">Fredag</li>
-                            <li class="open__time-sauna-days">Lördag</li>
-                            <li class="open__time-sauna-days">Söndag</li>    
-                        </ul>
-                        <ul>
-                            <li class="open__time-sauna-time">09:30 - 20:00</li>
-                            <li class="open__time-sauna-time">09:30 - 20:00</li>
-                            <li class="open__time-sauna-time">09:30 - 20:00</li>
-                            <li class="open__time-sauna-time"> 09:30 - 19:00</li>
-                            <li class="open__time-sauna-time"> 09:30 - 19:00</li>
-                            <li class="open__time-sauna-time"> 09:00 - 13:00</li>
-                            <li class="open__time-sauna-time">16:00 - 20:00</li>
+                            <li class="open__time-sauna-days open__time-sauna-days-color">Måndag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-sauna-days">Tisdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-sauna-days open__time-sauna-days-color">Onsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-sauna-days">Torsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-sauna-days open__time-sauna-days-blue">Fredag <span>09:30 - 19:00</span></li>
+                            <li class="open__time-sauna-days">Lördag <span>09:00 - 20:00</span></li>
+                            <li class="open__time-sauna-days open__time-sauna-days-color">Söndag <span>16:00 - 20:00</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="open__time-keycard">
-                    <h1>KEYCARD</h1>
+                    <h5>KEYCARD</h5>
                     <div class="open__time-keycard-wrapper">
                         <ul class="open__time-keycard-list">
-                            <li class="open__time-keycard-days">Måndag</li>
-                            <li class="open__time-keycard-days">Tisdag</li>
-                            <li class="open__time-keycard-days">Onsdag</li>
-                            <li class="open__time-keycard-days">Torsdag</li>
-                            <li class="open__time-keycard-days">Fredag</li>
-                            <li class="open__time-keycard-days">Lördag</li>
-                            <li class="open__time-keycard-days">Söndag</li>
-                        </ul>
-                        <ul>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
-                            <li class="open__time-keycard-time">09:30 - 20:00</li>
+                            <li class="open__time-keycard-days open__time-keycard-days-color">Måndag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days">Tisdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days open__time-keycard-days-color">Onsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days">Torsdag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days open__time-keycard-days-blue">Fredag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days">Lördag <span>09:30 - 20:00</span></li>
+                            <li class="open__time-keycard-days open__time-keycard-days-color">Söndag <span>09:30 - 20:00</span></li>
                         </ul>
                     </div>
                 </div>
@@ -286,7 +303,7 @@
 
     <!-- MAP -->
 
-    <section class="map">
+    <section id="About" class="map">
         <div class="map__inner">
             <img src="/src/Images/MAP.svg" alt="" class="map__image">
         </div>
@@ -294,14 +311,14 @@
 
     <!-- FOOTER -->
 
-    <section class="footer">
+    <section id="Contact" class="footer">
         <div class="footer__inner">
-            <div class="foote__info">
-                <img src="src/Images/Traningslagret-logo.svg" alt="">
-                <h6>Träningslagret Fitness Center</h6>
+            <div class="footer__info">
+                <img class="footer__info-image" src="src/Images/Traningslagret-logo.svg" alt="">
+                <p><span>Träningslagret Fitness Center</span></p>
                 <p>Centrumleden 21A</p>
                 <p>69140 Karlskoga</p>
-                <p><span>Telefon</span>0586 - 339 00</p>
+                <p><span>Telefon: </span> 0586 - 339 00</p>
 
             </div>
 
@@ -317,9 +334,18 @@
                 <img src="src/Images/LOGO-FRISKVARD.svg" alt="">
 
                 <div class="footer__social">
-                    <img src="src/Images/Facebook_details.svg" alt="">
-                    <img src="src/Images/Instagram_details.svg" alt="">
+                    <a href="">
+                        <img src="src/Images/Facebook_details.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="src/Images/Instagram_details.svg" alt="">
+                    </a>
                 </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="footer__copyright-inner">
+                Copyright 2023, Björn Tengelin, Alla rättigheter reserverade
             </div>
         </div>
     </section>

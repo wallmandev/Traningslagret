@@ -1,34 +1,63 @@
+@use '../../scss/components/details';
+
 .banner{
     display: grid;
     grid-template-columns: var(--grid-container);
-    height: 380px;
+    max-height: 380px;
+    margin-bottom: var(--section-gap);
 
 
     &__inner{
         grid-column: inner;
-
+        overflow: hidden;
+        position: relative;
+        transition: all 0.2s;
+        &:hover{
+            transform: translateX(6px) scale(1.02);
+            cursor: pointer;
+        }
     }
     
     &__image{
-        position: absolute;
-        opacity: 0.63;
-        background-color: black;
-    }
-
-    &__overlay{
+        object-fit: cover;
         position: relative;
-        padding: 1rem 3rem;
-        top: 20%;
+        height: 100%;
     }
-
-    &__overlay-content{
-        color: #fff;
-        font-size: 88px;
-        margin: 0;
+    
+    
+    &__content{
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        h2{ 
+            font-size: 5.5rem;
+            padding: 0;
+            margin: 1rem 2.5rem;
+            color: #fff;
+        }
+        
+        h3{
+            font-size: 2.5rem;
+            padding: 0;
+            margin: 1rem 2.5rem;
+            color: #fff;
+            opacity: 0.82;
+        }
+        
     }
+    &__content-overlay{
+        @include details.arrow;
+        background-color: rgba($color: #3F4A53, $alpha: 0.6);
+        position: absolute;
+        transition: all 0.2s;
+        &:hover{
+            background-color: rgba($color: #5d6d7a, $alpha: 0.5);
+            span{
+                color: #3F4A53;
+            }   
+        }
 
-    &__overlay-breadcrumb{
-        color: #fff;
-        font-size: 39px;
     }
 }

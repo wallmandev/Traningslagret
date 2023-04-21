@@ -1,0 +1,201 @@
+.hamburger{
+    position: relative;
+    z-index: 999;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    overflow: hidden;
+    height: 23px;
+
+    &__main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        backdrop-filter: blur(5px);
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: all .375s;
+        
+        &-epost{
+            position: absolute;
+            bottom: 1rem;
+            width: 18.8rem;
+
+            a{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+    &__main-nav.is-open {
+        opacity: 1;
+        z-index: 100;
+        visibility: visible;
+    }
+
+    /* Yellow band effect */
+    &__main-nav::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        transform-origin: 0 0;
+        transform: translateX(-120%);
+        transition: all .275s .1s;
+    }
+
+    &__main-nav.is-open::before {
+        transform: translateX(0);
+    }
+
+    /* Effect on menu links */
+    &__main-nav ul {
+        display: inline-flex;
+        flex-direction: column;
+        height: 100%;
+        width: 8rem;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-18%);
+    }
+
+    &__main-nav li {
+        display: block;
+        margin: .5rem 0;
+        text-align: right;
+
+        &:hover{
+            border-bottom: 1px solid #102331;
+        }
+    }
+
+    // Apparition effect on links
+    &__main-nav button {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    &__main-nav p {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    &__main-nav.is-open button {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &__main-nav.is-open p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__main-nav li:nth-child(1) a {
+        transition: all 275ms 175ms
+    }
+    &__main-nav li:nth-child(2) a {
+        transition: all 275ms 225ms
+    }
+    &__main-nav li:nth-child(3) a {
+        transition: all 275ms 275ms
+    }
+    &__main-nav li:nth-child(4) a {
+        transition: all 275ms 325ms
+    }
+    &__main-nav li:nth-child(5) a {
+        transition: all 275ms 375ms
+    }
+    &__main-nav li:nth-child(6) p {
+        transition: all 275ms 425ms
+    }
+
+
+    // Decoration
+    &__main-nav ul,
+    &__main-nav li {
+        list-style: none;
+        padding: 0;
+    }
+    &__main-nav button {
+        display: block;
+        background: none;
+        border: none;
+        width: 100%;
+        padding: 12px 0;
+        color: #102331;
+        font-size: 2.2em;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Abolition';
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(115%);
+        }
+    }
+
+    // Burger Style:
+    &__open-main-nav {
+        top: 55px;
+        right: 40px;
+        height: 40px;
+        z-index: 1000;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    &__burger {
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 0 auto;
+        background: #fff;
+        transition: all .275s;
+    }
+
+    &__burger:after,
+    &__burger:before {
+        content: '';
+        display: block;
+        height: 100%;
+        background: #fff;
+        transition: all .275s;  
+    }
+
+    &__burger:after {
+        transform: translateY(-12px);
+    }
+
+    &__burger:before {
+        transform: translateY(-16px);
+    }
+
+    /* Toggle State part */
+    .is-open &__burger {
+        transform: skew(5deg) translateY(-8px) rotate(-45deg);
+        background-color: #102331;
+        z-index: 99999999;
+    }
+
+    .is-open &__burger:before {
+        transform: translateY(0px) skew(-12deg) rotate(75deg);
+        background-color: #102331;
+        z-index: 9999999;
+    }
+
+    .is-open &__burger:after {
+        transform: translateY(-12px) translateX(10px) skew(-1deg);
+        opacity: 0;
+        z-index: 9999999;
+        background-color: #102331;
+    }
+
+}

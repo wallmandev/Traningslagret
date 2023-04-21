@@ -1,5 +1,5 @@
 :root {
-  --section-gap: 8rem;
+  --section-gap: 6rem;
   --section-gap-inner: calc( var(--section-gap) * 0.75 );
   --gap-xl: 4rem;
   --gap-l: 3rem;
@@ -70,6 +70,50 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 5rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
+}
+
+h2 {
+  font-size: 4rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
+}
+
+h3 {
+  font-size: 3.75rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
+}
+
+h4 {
+  font-size: 3.5rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
+}
+
+h5 {
+  font-size: 3rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
+}
+
+h6 {
+  font-size: 2rem;
+  font-style: oblique;
+  margin: 0;
+  color: #3F4A53;
 }
 
 p {
@@ -99,7 +143,6 @@ li {
 .header__inner {
   display: flex;
   grid-area: inner;
-  justify-content: space-between;
   align-items: center;
 }
 .header__logo {
@@ -109,17 +152,88 @@ li {
   width: 9rem;
   height: 6rem;
 }
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header__menu-button {
+  background: none;
+  border: 0;
+}
+.header__menu-button:hover {
+  cursor: pointer;
+}
 .header__menu-item {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-right: 2rem;
 }
 .header__menu-list {
   list-style: none;
   font-size: 25px;
   color: #FFF;
+  font-family: "Abolition";
   font-style: oblique;
+  transition: all 0.2s;
+}
+.header__menu-list:hover {
+  transform: scale(1.2);
+  color: #d6d6d6;
+}
+.header__menu-list-home {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: red;
+  text-underline-offset: 5px;
+}
+.header__menu-item-button {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-s);
+  width: 21px;
+  height: 21px;
+  position: relative;
+  padding-left: 1rem;
+  transition: all 0.2s;
+}
+.header__menu-item-button-hamburger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transition: height 0s 0.2s;
+}
+.header__menu-item-button-hamburger::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: inherit;
+  position: absolute;
+  top: -8px;
+  transition: top 0.2s 0.2s, transform 0.2s;
+}
+.header__menu-item-button-hamburger::after {
+  content: "";
+  right: 0;
+  top: 8px;
+  width: 70%;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: inherit;
+  position: absolute;
+  transition: top 0.2s 0.2s, transform 0.2s;
 }
 
 .footer {
@@ -133,10 +247,40 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 80px;
+}
+.footer__info {
+  color: #fff;
+}
+.footer__info p {
+  margin: 0;
+  padding: 0;
+}
+.footer__info span {
+  font-weight: 600;
+}
+.footer__info-image {
+  margin-bottom: 2.5rem;
 }
 .footer__buttons {
   display: flex;
   flex-direction: column;
+  align-items: start;
+  width: 10rem;
+  gap: 1.5rem;
+}
+.footer__buttons button {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Industry";
+  transition: all 0.2s;
+}
+.footer__buttons button:hover {
+  cursor: pointer;
+  font-size: 18px;
+  color: #a2a2a2;
 }
 .footer__logo {
   display: flex;
@@ -149,9 +293,23 @@ li {
   gap: 1rem;
 }
 
+.footer__copyright {
+  display: grid;
+  grid-area: inner;
+  bottom: 0;
+}
+.footer__copyright-inner {
+  display: flex;
+  align-items: end;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  opacity: 0.5;
+}
+
 .offers {
   display: grid;
   grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
 }
 .offers__inner {
   grid-column: inner;
@@ -165,7 +323,8 @@ li {
   height: 200px;
   border: 0;
   background: none;
-  background-color: rgba(63, 74, 83, 0.8392156863);
+  background-color: #3f4a53;
+  transition: all 0.2s;
 }
 .offers__price::after {
   content: "";
@@ -191,13 +350,41 @@ li {
   right: 9px;
   bottom: 10px;
 }
+.offers__price:hover {
+  cursor: pointer;
+  background-color: #6c7e8d;
+  transform: translate(6px);
+}
+.offers__price:hover span {
+  transition: all 0.3s;
+  color: #3F4A53;
+}
+.offers__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2.5rem;
+}
+.offers__wrapper h6 {
+  color: #fff;
+  opacity: 0.8;
+}
+.offers__wrapper h4 {
+  color: #fff;
+}
+.offers__wrapper p {
+  font-family: "Industry";
+  color: #fff;
+  opacity: 0.4;
+}
 .offers__book {
   position: relative;
   width: 400px;
   height: 200px;
   border: 0;
   background: none;
-  background-color: rgba(63, 74, 83, 0.3);
+  background-color: rgba(63, 74, 83, 0.2);
+  transition: all 0.2s;
 }
 .offers__book::after {
   content: "";
@@ -209,7 +396,7 @@ li {
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 50px solid #0584FF;
+  border-left: 50px solid rgba(63, 74, 83, 0.2274509804);
   rotate: 45deg;
 }
 .offers__book p {
@@ -223,13 +410,29 @@ li {
   right: 9px;
   bottom: 10px;
 }
+.offers__book:hover {
+  cursor: pointer;
+  background-color: #efefef;
+  transform: translate(6px);
+}
+.offers__book:hover span {
+  transition: all 0.3s;
+  color: #3F4A53;
+}
+.offers__book h6 {
+  color: #3F4A53;
+}
+.offers__book h4 {
+  color: #FD3E1D;
+}
 .offers__free {
   position: relative;
   width: 400px;
   height: 200px;
   border: 0;
   background: none;
-  background-color: rgba(63, 74, 83, 0.3);
+  background-color: rgba(63, 74, 83, 0.2);
+  transition: all 0.2s;
 }
 .offers__free::after {
   content: "";
@@ -241,7 +444,7 @@ li {
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 50px solid #0584FF;
+  border-left: 50px solid rgba(63, 74, 83, 0.2274509804);
   rotate: 45deg;
 }
 .offers__free p {
@@ -255,17 +458,34 @@ li {
   right: 9px;
   bottom: 10px;
 }
+.offers__free:hover {
+  cursor: pointer;
+  background-color: #efefef;
+  transform: translate(6px);
+}
+.offers__free:hover span {
+  transition: all 0.3s;
+  color: #3F4A53;
+}
+.offers__free h6 {
+  color: #3F4A53;
+  opacity: 0.6;
+}
+.offers__free h4 {
+  color: #3F4A53;
+}
 
 .news {
   display: grid;
   grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
 }
 .news__inner {
   grid-column: inner;
 }
 .news__header {
   grid-area: 1/1;
-  margin-bottom: 2rem;
+  margin-bottom: var(--gap-xl);
 }
 .news__grid-container {
   display: grid;
@@ -276,6 +496,9 @@ li {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 4;
+}
+.news__big-updated p {
+  margin: 0;
 }
 .news__big-header {
   display: flex;
@@ -294,6 +517,40 @@ li {
   width: 100%;
   object-fit: cover;
 }
+.news__big-readmore {
+  background: none;
+  border: 0;
+  font-size: 26px;
+  font-style: oblique;
+  padding: 0.5rem 1.5rem;
+  font-family: "Abolition";
+  color: #fff;
+  background-color: red;
+  transform: skew(-5deg);
+  transition: all 0.2s;
+}
+.news__big-readmore:hover {
+  cursor: pointer;
+  transform: translate(6px) skew(-5deg);
+  color: #121517;
+  font-size: 27px;
+}
+.news__big-share {
+  background: transparent;
+  font-family: "Abolition";
+  font-size: 26px;
+  font-style: oblique;
+  margin-left: 1rem;
+  border: 0;
+  color: #3F4A53;
+  transition: all 0.2s;
+}
+.news__big-share:hover {
+  cursor: pointer;
+  transform: translate(6px);
+  color: #121517;
+  font-size: 27px;
+}
 .news__small, .news__small-under {
   display: grid;
   grid-column-start: 4;
@@ -303,105 +560,310 @@ li {
 .news__small {
   grid-row-end: 2;
 }
+.news__small-header {
+  padding-bottom: var(--gap-s);
+}
 .news__small-buttons {
-  margin-bottom: 3.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.news__small-readmore {
+  background: none;
+  border: 0;
+  font-size: 26px;
+  font-style: oblique;
+  padding: 0.5rem 1.5rem;
+  font-family: "Abolition";
+  color: #fff;
+  background-color: red;
+  transform: skew(-5deg);
+  transition: all 0.2s;
+}
+.news__small-readmore:hover {
+  cursor: pointer;
+  transform: translate(6px) skew(-5deg);
+  color: #121517;
+  font-size: 27px;
+}
+.news__small-share {
+  background: transparent;
+  font-family: "Abolition";
+  font-size: 26px;
+  font-style: oblique;
+  margin-left: 1rem;
+  border: 0;
+  color: #3F4A53;
+  padding: 0;
+  transition: all 0.2s;
+}
+.news__small-share:hover {
+  cursor: pointer;
+  transform: translate(6px);
+  color: #121517;
+  font-size: 27px;
 }
 .news__small-under {
   grid-row-start: 5;
+  margin-top: 3rem;
 }
+
 .banner {
   display: grid;
   grid-template-columns: var(--grid-container);
-  height: 380px;
+  max-height: 380px;
+  margin-bottom: var(--section-gap);
 }
 .banner__inner {
   grid-column: inner;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s;
+}
+.banner__inner:hover {
+  transform: translateX(6px) scale(1.02);
+  cursor: pointer;
 }
 .banner__image {
-  position: absolute;
-  opacity: 0.63;
-  background-color: black;
-}
-.banner__overlay {
+  object-fit: cover;
   position: relative;
-  padding: 1rem 3rem;
-  top: 20%;
+  height: 100%;
 }
-.banner__overlay-content {
+.banner__content {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner__content h2 {
+  font-size: 5.5rem;
+  padding: 0;
+  margin: 1rem 2.5rem;
   color: #fff;
-  font-size: 88px;
+}
+.banner__content h3 {
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 1rem 2.5rem;
+  color: #fff;
+  opacity: 0.82;
+}
+.banner__content-overlay {
+  background-color: rgba(63, 74, 83, 0.6);
+  position: absolute;
+  transition: all 0.2s;
+}
+.banner__content-overlay::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -7px;
+  bottom: -32px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #0584FF;
+  rotate: 45deg;
+}
+.banner__content-overlay p {
+  padding: 0;
   margin: 0;
 }
-.banner__overlay-breadcrumb {
+.banner__content-overlay .material-symbols-outlined {
   color: #fff;
-  font-size: 39px;
+  position: absolute;
+  z-index: 99;
+  right: 9px;
+  bottom: 10px;
+}
+.banner__content-overlay:hover {
+  background-color: rgba(93, 109, 122, 0.5);
+}
+.banner__content-overlay:hover span {
+  color: #3F4A53;
 }
 
 .open {
   display: grid;
   grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
 }
 .open__inner {
   grid-column: inner;
 }
+.open h5, .open span {
+  font-weight: 100;
+}
 .open__header {
   display: flex;
-  align-items: center;
+  gap: 2rem;
+  align-items: baseline;
   width: 100%;
+  margin-bottom: var(--gap-xl);
 }
-.open__header h5 {
+.open__header h6 {
   width: 100%;
-  padding-left: 1rem;
+  color: #0584FF;
+  opacity: 0.6;
 }
 .open__header-calendar {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  transition: all 0.2s;
 }
-.open__time-header {
-  display: flex;
+.open__header-calendar button {
+  background: none;
+  border: 0;
+  font-size: 26px;
+  font-style: oblique;
+  padding: 0.5rem 1.5rem;
+  font-family: "Abolition";
+  color: #fff;
+  background-color: red;
+  transform: skew(-5deg);
+  transition: all 0.2s;
+}
+.open__header-calendar button:hover {
+  transform: translate(6px) skew(-5deg);
+  color: #121517;
+  font-size: 27px;
+  cursor: pointer;
 }
 .open__time {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .open__time-reception-wrapper {
+  margin: var(--gap-m) 0 var(--gap-s) 0;
   display: flex;
+}
+.open__time-reception {
+  background-color: #435665;
+  position: relative;
+  width: 425px;
+  height: 500px;
+  padding: var(--gap-l) 3.5rem 0 3.5rem;
+}
+.open__time-reception ::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -7.5px;
+  top: -32px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid rgba(255, 255, 255, 0.02);
+  rotate: 315deg;
+}
+.open__time-reception h5 {
+  color: #fff;
+  padding-left: 2rem;
 }
 .open__time-reception-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  margin: 0;
   padding: 0;
+  gap: 0.5rem;
+  font-weight: 500;
 }
 .open__time-reception-days {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
   list-style: none;
-  padding: 0;
+  padding: 5px 1.5rem 5px 1.5rem;
+  color: #fff;
 }
-.open__time-reception-time {
+.open__time-reception-days-red {
+  color: #FD3E1D;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.open__time-reception-days-color {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+.open__time-reception-breadcrumb {
   list-style: none;
-  margin-left: 2rem;
+  color: #fff;
+  opacity: 0.4;
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
 }
 .open__time-sauna-wrapper {
+  margin: var(--gap-m) 0 var(--gap-s) 0;
   display: flex;
+}
+.open__time-sauna {
+  margin-top: var(--gap-l);
+}
+.open__time-sauna h5 {
+  margin-left: 2rem;
 }
 .open__time-sauna-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  margin: 0;
   padding: 0;
+  gap: 0.5rem;
+  font-weight: 500;
 }
-.open__time-sauna-time {
+.open__time-sauna-days {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
   list-style: none;
-  margin-left: 2rem;
+  padding: 5px 1.5rem 5px 1.5rem;
+  color: #707070;
+}
+.open__time-sauna-days-blue {
+  background-color: rgba(63, 74, 83, 0.07);
+  color: #0584FF;
+}
+.open__time-sauna-days-color {
+  background-color: rgba(63, 74, 83, 0.07);
+  width: 100%;
 }
 .open__time-keycard-wrapper {
+  margin: var(--gap-m) 0 var(--gap-s) 0;
   display: flex;
 }
-.open__time-keycard-list {
-  list-style: none;
-  padding: 0;
+.open__time-keycard {
+  margin-top: var(--gap-l);
 }
-.open__time-keycard-time {
-  list-style: none;
+.open__time-keycard h5 {
   margin-left: 2rem;
+}
+.open__time-keycard-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.open__time-keycard-days {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  list-style: none;
+  padding: 5px 1.5rem 5px 1.5rem;
+  color: #707070;
+}
+.open__time-keycard-days-blue {
+  background-color: rgba(63, 74, 83, 0.07);
+  color: #0584FF;
+}
+.open__time-keycard-days-color {
+  background-color: rgba(63, 74, 83, 0.07);
+  width: 100%;
 }
 
 .map {
@@ -417,6 +879,180 @@ li {
   min-width: 100%;
 }
 
+.hamburger {
+  position: relative;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  height: 23px;
+  /* Yellow band effect */
+  /* Effect on menu links */
+  /* Toggle State part */
+}
+.hamburger__main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all 0.375s;
+}
+.hamburger__main-nav-epost {
+  position: absolute;
+  bottom: 1rem;
+  width: 18.8rem;
+}
+.hamburger__main-nav-epost a {
+  font-size: 1.2rem;
+}
+.hamburger__main-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+.hamburger__main-nav::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  transform-origin: 0 0;
+  transform: translateX(-120%);
+  transition: all 0.275s 0.1s;
+}
+.hamburger__main-nav.is-open::before {
+  transform: translateX(0);
+}
+.hamburger__main-nav ul {
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 8rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-18%);
+}
+.hamburger__main-nav li {
+  display: block;
+  margin: 0.5rem 0;
+  text-align: right;
+}
+.hamburger__main-nav li:hover {
+  border-bottom: 1px solid #102331;
+}
+.hamburger__main-nav button {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.hamburger__main-nav p {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.hamburger__main-nav.is-open button {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hamburger__main-nav.is-open p {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hamburger__main-nav li:nth-child(1) a {
+  transition: all 275ms 175ms;
+}
+.hamburger__main-nav li:nth-child(2) a {
+  transition: all 275ms 225ms;
+}
+.hamburger__main-nav li:nth-child(3) a {
+  transition: all 275ms 275ms;
+}
+.hamburger__main-nav li:nth-child(4) a {
+  transition: all 275ms 325ms;
+}
+.hamburger__main-nav li:nth-child(5) a {
+  transition: all 275ms 375ms;
+}
+.hamburger__main-nav li:nth-child(6) p {
+  transition: all 275ms 425ms;
+}
+.hamburger__main-nav ul, .hamburger__main-nav li {
+  list-style: none;
+  padding: 0;
+}
+.hamburger__main-nav button {
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 12px 0;
+  color: #102331;
+  font-size: 2.2em;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Abolition";
+  transition: all 0.2s;
+}
+.hamburger__main-nav button:hover {
+  cursor: pointer;
+  transform: scale(115%);
+}
+.hamburger__open-main-nav {
+  top: 55px;
+  right: 40px;
+  height: 40px;
+  z-index: 1000;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.hamburger__burger {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 0 auto;
+  background: #fff;
+  transition: all 0.275s;
+}
+.hamburger__burger:after, .hamburger__burger:before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: #fff;
+  transition: all 0.275s;
+}
+.hamburger__burger:after {
+  transform: translateY(-12px);
+}
+.hamburger__burger:before {
+  transform: translateY(-16px);
+}
+.is-open .hamburger__burger {
+  transform: skew(5deg) translateY(-8px) rotate(-45deg);
+  background-color: #102331;
+  z-index: 99999999;
+}
+.is-open .hamburger__burger:before {
+  transform: translateY(0px) skew(-12deg) rotate(75deg);
+  background-color: #102331;
+  z-index: 9999999;
+}
+.is-open .hamburger__burger:after {
+  transform: translateY(-12px) translateX(10px) skew(-1deg);
+  opacity: 0;
+  z-index: 9999999;
+  background-color: #102331;
+}
+
 .hero {
   display: grid;
   grid-template-columns: var(--grid-container);
@@ -426,23 +1062,45 @@ li {
   height: 100vh;
   width: 100%;
   margin: 0;
-  margin-bottom: 4rem;
+  margin-bottom: var(--section-gap);
 }
 .hero__inner {
   grid-area: inner;
 }
 .hero__content {
   position: absolute;
-  bottom: 15rem;
-  font-size: 70px;
-  color: #f1f1f1;
+  bottom: 10rem;
+  font-size: 80px;
   width: 43rem;
 }
-.hero__content h2 {
+.hero__content h1 {
   margin: 0;
+  font-size: 100px;
 }
 .hero__content-header {
+  color: #fff;
   font-weight: 200;
+}
+.hero__content-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: "Abolition";
+  color: #fff;
+  font-size: 31px;
+  height: 60px;
+  width: 153px;
+  background-color: #0584FF;
+  transform: skew(-5deg);
+  transition: all 0.2s;
+}
+.hero__content-button--red {
+  background-color: red;
+}
+.hero__content-button:hover {
+  cursor: pointer;
+  transform: translate(6px) skew(-5deg);
+  color: #121517;
 }
 .hero__footer {
   position: absolute;
@@ -450,25 +1108,40 @@ li {
   bottom: 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: #fff;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 .hero__footer-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   border: 0;
   background: none;
+  color: #fff;
+  transition: all 0.2s;
 }
 .hero__footer-button:hover {
+  color: #848484;
   cursor: pointer;
+  transform: translateY(8px);
+}
+.hero__footer-button-readmore {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Abolition";
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  color: #fff;
+  transition: all 0.2s;
+}
+.hero__footer-button-readmore:hover {
+  color: #848484;
 }
 .hero__footer-social {
   display: flex;
   gap: 1rem;
   right: 0;
   position: absolute;
-}
-.hero .material-symbols-outlined {
-  color: #fff;
 }
 .hero__content-button {
   background: none;
@@ -487,9 +1160,6 @@ li {
 }
 .hero__content-button:hover {
   cursor: pointer;
-}
-.hero__readmore {
-  font-size: 20px;
 }
 .hero__details-button {
   background: none;

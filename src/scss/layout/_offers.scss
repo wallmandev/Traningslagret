@@ -3,6 +3,7 @@
 .offers{
     display: grid;
     grid-template-columns: var(--grid-container);
+    margin-bottom: var(--section-gap);
 
     &__inner{
         grid-column: inner;
@@ -17,9 +18,44 @@
         height: 200px;
         border: 0;
         background: none;
-        background-color: #3f4a53d6;
-
+        background-color: #3f4a53;
         @include details.arrow;
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            background-color: #6c7e8d;
+            transform: translate(6px);
+            
+            span{
+                transition: all 0.3s;
+                color: #3F4A53;
+            }
+        }
+
+
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 2.5rem;
+
+        h6{
+            color: #fff;
+            opacity: 0.8;
+        }
+        
+        h4{
+            color: #fff;
+        }
+
+        p{
+            font-family: 'Industry';
+            color: #fff;
+            opacity: 0.4;
+
+        }
     }
 
     &__book{
@@ -28,9 +64,28 @@
         height: 200px;
         border: 0;
         background: none;
-        background-color: rgba($color: #3F4A53, $alpha: 0.3);
+        background-color: rgba($color: #3F4A53, $alpha: 0.2);
+        @include details.opacitybutton;
+        transition: all 0.2s;
 
-        @include details.arrow;
+        &:hover{
+            cursor: pointer;
+            background-color: #efefef;
+            transform: translate(6px);
+            
+            span{
+                transition: all 0.3s;
+                color: #3F4A53;
+            }
+        }
+
+        h6{
+            color: #3F4A53;
+        }
+        
+        h4{
+            color: #FD3E1D;
+        }
     }
 
     &__free{
@@ -39,9 +94,29 @@
         height: 200px;
         border: 0;
         background: none;
-        background-color: rgba($color: #3F4A53, $alpha: 0.3);
+        background-color: rgba($color: #3F4A53, $alpha: 0.2);
+        transition: all 0.2s;
+        @include details.opacitybutton;
 
-        @include details.arrow;
+        &:hover{
+            cursor: pointer;
+            background-color: #efefef;
+            transform: translate(6px);
+            
+            span{
+                transition: all 0.3s;
+                color: #3F4A53;
+            }
+        }
+
+        h6{
+            color: #3F4A53;
+            opacity: 0.6;
+        }
+
+        h4{
+            color: #3F4A53;
+        }
     }
 
 

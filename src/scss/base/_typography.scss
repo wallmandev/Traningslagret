@@ -4,30 +4,50 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
+    letter-spacing: 1px;
+    font-weight: 100;
 }
 
 h1 {
-
+    font-size: 5rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 h2 {
- 
+    font-size: 4rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 h3 {
-
+    font-size: 3.75rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 h4 {
-
+    font-size: 3.5rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 h5 {
-
+    font-size: 3rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 h6 {
-
+    font-size: 2rem;
+    font-style: oblique;
+    margin: 0;
+    color: #3F4A53;
 }
 
 p {

@@ -1,6 +1,9 @@
+@use '../../scss/components/details';
+
 .news{
     display: grid;
     grid-template-columns: var(--grid-container);
+    margin-bottom: var(--section-gap);
 
     &__inner{
         grid-column: inner;
@@ -8,7 +11,7 @@
 
     &__header{
         grid-area: 1/1;
-        margin-bottom: 2rem;
+        margin-bottom: var(--gap-xl);
     }
 
     &__grid-container{
@@ -21,6 +24,12 @@
         display: grid;
         grid-column-start: 1;
         grid-column-end: 4;
+
+        &-updated{
+            p{
+                margin: 0;
+            }
+        }
     }
 
     &__big-header{
@@ -43,6 +52,31 @@
         object-fit: cover;
     }
 
+    &__big-readmore{
+        @include details.skewbutton;
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            transform: translate(6px) skew(-5deg);
+            color: #121517;
+            font-size: 27px;
+        }
+    }
+
+    &__big-share{
+        @include details.sharebutton;
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            transform: translate(6px);
+            color: #121517;
+            font-size: 27px;
+        }
+        
+    }
+
     // Small containers on the side
 
     &__small,
@@ -55,17 +89,45 @@
 
     &__small{
         grid-row-end: 2;
+
+        &-header{
+            padding-bottom: var(--gap-s);
+        }
     }
 
     &__small-buttons{
-        margin-bottom: 3.5rem;
+        display: flex;
+        gap: 1rem;
+    }
+    
+    &__small-readmore{
+        @include details.skewbutton;
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            transform: translate(6px) skew(-5deg);
+            color: #121517;
+            font-size: 27px;
+        }
+    }
+
+    &__small-share{
+        @include details.sharebutton;
+        padding: 0;
+        transition: all 0.2s;
+
+        &:hover{
+            cursor: pointer;
+            transform: translate(6px);
+            color: #121517;
+            font-size: 27px;
+        }
     }
 
     &__small-under{
         grid-row-start: 5;
-    }
-
-    &__small-figure{
+        margin-top: 3rem;
     }
 
 }
